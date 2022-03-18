@@ -4,6 +4,7 @@ import Dropdown from '../components/Dropdown'
 const DropdownDemo = () => {
   return (
     <>
+      <h1 className='ml-12 text-xl'>Dropdown</h1>
       <div className="m-12">
         <div className='mb-4'>This page is made to see the demo of dropdown</div>
         <Dropdown />
