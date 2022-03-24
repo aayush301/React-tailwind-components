@@ -7,7 +7,7 @@ const PopoverDemo = () => {
       <h1 className='m-8 text-center'>Popover</h1>
       <div className="m-4">
 
-        <Popover position={"bottom"} className={"m-0"}>
+        <Popover position={"bottom"}>
           <button className="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
             Popover on bottom
           </button>
@@ -18,8 +18,8 @@ const PopoverDemo = () => {
         </Popover>
 
 
-        <Popover position={"left"} className={"m-4"}>
-          <button className="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
+        <Popover position={"left"}>
+          <button className="m-4 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
             Popover on left
           </button>
           <div className='font-["Segoe_UI"] w-[200px] bg-white shadow-lg rounded-md'>
@@ -29,8 +29,8 @@ const PopoverDemo = () => {
         </Popover>
 
 
-        <Popover position={"right"} className={"m-4"}>
-          <button className="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
+        <Popover position={"right"}>
+          <button className="m-4 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
             Popover on right
           </button>
           <div className='font-["Segoe_UI"] w-[200px] bg-white shadow-xl rounded-md'>
@@ -39,20 +39,15 @@ const PopoverDemo = () => {
           </div>
         </Popover>
 
-        <br /><br /><br /><br /><br />
-
-
-        <Popover position={"top"} className={"m-4"}>
-          <button className="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
-            Popover on top
+        <Popover position={"top"}>
+          <button className="m-4 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
+            Popover on right
           </button>
-          <div className='font-["Segoe_UI"] w-[200px] bg-white shadow-lg rounded-md'>
+          <div className='font-["Segoe_UI"] w-[200px] bg-white shadow-xl rounded-md'>
             <h3 className='border-b px-4 py-2'>Heading</h3>
             <p className='p-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tempora voluptate nam necessitatibus natus nesciunt incidunt molestias sequi autem. Quo!</p>
           </div>
         </Popover>
-
-
 
       </div>
     </>

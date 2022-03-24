@@ -19,6 +19,9 @@ Note:
 - Carousel
 - Chips
 - Dropdown
+- Form
+- List hover effects
+- Modal
 - Multistep Form
 - Navbar
 - Notification Badge
@@ -28,6 +31,9 @@ Note:
 - Scroll back to top button
 - Sidebar
 - Tabs
+- Timeline
+- Toast
+- Tooltip
 
 ## Tools and Technologies
 - HTML
