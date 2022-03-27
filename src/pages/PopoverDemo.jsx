@@ -41,7 +41,7 @@ const PopoverDemo = () => {
 
         <Popover position={"top"}>
           <button className="m-4 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg">
-            Popover on right
+            Popover on top
           </button>
           <div className='font-["Segoe_UI"] w-[200px] bg-white shadow-xl rounded-md'>
             <h3 className='border-b px-4 py-2'>Heading</h3>

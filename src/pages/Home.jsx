@@ -4,28 +4,36 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <>
-      <ul className='m-auto w-max mt-[100px]'>
-        <Link to={"/accordion"} className='text-blue-500'>Accordion</Link><br />
-        <Link to={"/alerts"} className='text-blue-500'>Alerts</Link><br />
-        <Link to={"/carousel"} className='text-blue-500'>Carousel</Link><br />
-        <Link to={"/chips"} className='text-blue-500'>Chips</Link><br />
-        <Link to={"/dropdown"} className='text-blue-500'>Dropdown</Link><br />
-        <Link to={"/form"} className='text-blue-500'>Form</Link><br />
-        <Link to={"/list-hover"} className='text-blue-500'>List Hover Effects</Link><br />
-        <Link to={"/modal"} className='text-blue-500'>Modal</Link><br />
-        <Link to={"/multistepform"} className='text-blue-500'>Multistep form</Link><br />
-        <Link to={"/navbar"} className='text-blue-500'>Navbar</Link><br />
-        <Link to={"/notification-badge"} className='text-blue-500'>Notification Badges</Link><br />
-        <Link to={"/popover"} className='text-blue-500'>Popover</Link><br />
-        <Link to={"/rating"} className='text-blue-500'>Rating</Link><br />
-        <Link to={"/scrollspy"} className='text-blue-500'>Scrollspy</Link><br />
-        <Link to={"/scroll-back-to-top-btn"} className='text-blue-500'>Scroll Back To Top Button</Link><br />
-        <Link to={"/sidebar"} className='text-blue-500'>Sidebar</Link><br />
-        <Link to={"/table"} className='text-blue-500'>Table</Link><br />
-        <Link to={"/tabs"} className='text-blue-500'>Tabs</Link><br />
-        <Link to={"/timeline"} className='text-blue-500'>Timeline</Link><br />
-        <Link to={"/toast"} className='text-blue-500'>Toast</Link><br />
-        <Link to={"/tooltip"} className='text-blue-500'>Tooltip</Link><br />
+      <h1 className='text-center text-xl shadow-sm p-4'>React Tailwind Components</h1>
+      <ul className='m-auto mt-2 flex flex-col content-evenly gap-1 flex-wrap bg-gray-100 p-8 max-h-[500px] text-gray-600'>
+        {[
+          { path: "/accordion", label: "Accordion" },
+          { path: "/alerts", label: "Alerts" },
+          { path: "/carousel", label: "Carousel" },
+          { path: "/chips", label: "Chips" },
+          { path: "/dropdown", label: "Dropdown" },
+          { path: "/form", label: "Form" },
+          { path: "/list-hover", label: "List hover Effects" },
+          { path: "/modal", label: "Modal" },
+          { path: "/multiselect-menu", label: "Multiselect Menu" },
+          { path: "/multistepform", label: "Multistep form" },
+          { path: "/navbar", label: "Navbar" },
+          { path: "/notification-badge", label: "Notification Badges" },
+          { path: "/popover", label: "Popover" },
+          { path: "/rating", label: "Rating" },
+          { path: "/scrollspy", label: "Scrollspy" },
+          { path: "/scroll-back-to-top-btn", label: "Scroll Back To Top Button" },
+          { path: "/select-menu", label: "Select Menu" },
+          { path: "/sidebar", label: "Sidebar" },
+          { path: "/sidebar-with-submenu", label: "Sidebar with sub-menu" },
+          { path: "/table", label: "Table" },
+          { path: "/tabs", label: "Tabs" },
+          { path: "/timeline", label: "Timeline" },
+          { path: "/toast", label: "Toast" },
+          { path: "/tooltip", label: "Tooltip" },
+        ].map(({ path, label }) => (
+          <Link to={path} className="self-start transition hover:text-indigo-600"> {label} </Link>
+        ))}
       </ul>
     </>
   )

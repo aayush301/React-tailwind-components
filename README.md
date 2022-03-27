@@ -22,6 +22,7 @@ Note:
 - Form
 - List hover effects
 - Modal
+- Multiselect Menu
 - Multistep Form
 - Navbar
 - Notification Badge
@@ -29,7 +30,10 @@ Note:
 - Rating
 - Scrollspy
 - Scroll back to top button
+- Select Menu
 - Sidebar
+- Sidebar with Submenus
+- Table
 - Tabs
 - Timeline
 - Toast

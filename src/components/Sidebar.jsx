@@ -13,7 +13,7 @@ const Sidebar = () => {
     <>
       <div className={`fixed bg-white py-4 h-screen border-r-2 transition-all ${isSidebarOpen ? "w-60 shadow md:shadow-none" : "w-16"}`}>
         <div className='mx-2'>
-          <span onClick={toggleSidebar} className="inline-block w-12 h-12 flex items-center justify-center cursor-pointer rounded-full hover:bg-slate-200"><i className="fa-solid fa-bars"></i></span>
+          <span onClick={toggleSidebar} className="inline-flex w-12 h-12 items-center justify-center cursor-pointer rounded-full hover:bg-slate-200"><i className="fa-solid fa-bars"></i></span>
         </div>
 
         <ul className='my-4 whitespace-nowrap overflow-x-hidden'>
