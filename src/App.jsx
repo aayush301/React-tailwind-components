@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import AccordionDemo from "./pages/AccordionDemo"
 import AlertsDemo from "./pages/AlertsDemo"
 import CarouselDemo from "./pages/CarouselDemo"
+import CheckboxDemo from "./pages/CheckboxDemo"
 import ChipsDemo from "./pages/ChipsDemo"
 import DropdownDemo from "./pages/DropdownDemo"
 import FormDemo from "./pages/FormDemo"
@@ -35,6 +36,7 @@ function App() {
           <Route path="/accordion" element={<AccordionDemo />} />
           <Route path="/alerts" element={<AlertsDemo />} />
           <Route path="/carousel" element={<CarouselDemo />} />
+          <Route path="/checkbox" element={<CheckboxDemo />} />
           <Route path="/chips" element={<ChipsDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
           <Route path="/form" element={<FormDemo />} />

@@ -10,6 +10,7 @@ const Home = () => {
           { path: "/accordion", label: "Accordion" },
           { path: "/alerts", label: "Alerts" },
           { path: "/carousel", label: "Carousel" },
+          { path: "/checkbox", label: "Checkbox" },
           { path: "/chips", label: "Chips" },
           { path: "/dropdown", label: "Dropdown" },
           { path: "/form", label: "Form" },
@@ -32,7 +33,7 @@ const Home = () => {
           { path: "/toast", label: "Toast" },
           { path: "/tooltip", label: "Tooltip" },
         ].map(({ path, label }) => (
-          <Link to={path} className="self-start transition hover:text-indigo-600"> {label} </Link>
+          <Link to={path} key={path} className="self-start transition hover:text-indigo-600"> {label} </Link>
         ))}
       </ul>
     </>

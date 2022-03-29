@@ -17,6 +17,7 @@ Note:
 - Accordion
 - Alerts
 - Carousel
+- Checkbox
 - Chips
 - Dropdown
 - Form
