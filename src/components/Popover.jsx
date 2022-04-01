@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ReactDom from 'react-dom';
 
 const Portal = ({ children }) => {

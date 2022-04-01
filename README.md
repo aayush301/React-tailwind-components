@@ -19,21 +19,26 @@ Note:
 - Carousel
 - Checkbox
 - Chips
+- Circular Menu
+- Circular Rotating List
 - Dropdown
 - Form
+- Image hover effects
 - List hover effects
 - Modal
 - Multiselect Menu
 - Multistep Form
 - Navbar
-- Notification Badge
+- Notification Badges
 - Popover
+- Progress
 - Rating
 - Scrollspy
 - Scroll back to top button
 - Select Menu
 - Sidebar
 - Sidebar with Submenus
+- Speed Dial
 - Table
 - Tabs
 - Timeline

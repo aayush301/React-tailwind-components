@@ -1,12 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import AccordionDemo from "./pages/AccordionDemo"
 import AlertsDemo from "./pages/AlertsDemo"
+import AutocompleteDemo from "./pages/AutocompleteDemo"
 import CarouselDemo from "./pages/CarouselDemo"
 import CheckboxDemo from "./pages/CheckboxDemo"
 import ChipsDemo from "./pages/ChipsDemo"
+import CircularMenuDemo from "./pages/CircularMenuDemo"
+import CircularRotatingListDemo from "./pages/CircularRotatingListDemo"
 import DropdownDemo from "./pages/DropdownDemo"
 import FormDemo from "./pages/FormDemo"
 import Home from "./pages/Home"
+import ImageHoverDemo from "./pages/ImageHoverDemo"
 import ListHoverDemo from "./pages/ListHoverDemo"
 import ModalDemo from "./pages/ModalDemo"
 import MultiselectMenuDemo from "./pages/MultiselectMenuDemo"
@@ -14,12 +18,14 @@ import MultistepFormDemo from "./pages/MultistepFormDemo"
 import NavbarDemo from "./pages/NavbarDemo"
 import NotificationBadgeDemo from "./pages/NotificationBadgeDemo"
 import PopoverDemo from "./pages/PopoverDemo"
+import ProgressDemo from "./pages/ProgressDemo"
 import RatingDemo from "./pages/RatingDemo"
 import ScrollspyDemo from "./pages/ScrollspyDemo"
 import ScrollToTopDemo from "./pages/ScrollToTopDemo"
 import SelectMenuDemo from "./pages/SelectMenuDemo"
 import SidebarDemo from "./pages/SidebarDemo"
 import SidebarWithSubmenuDemo from "./pages/SidebarWithSubmenuDemo"
+import SpeedDialDemo from "./pages/SpeedDialDemo"
 import TableDemo from "./pages/TableDemo"
 import TabsDemo from "./pages/TabsDemo"
 import TimelineDemo from "./pages/TimelineDemo"
@@ -35,11 +41,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/accordion" element={<AccordionDemo />} />
           <Route path="/alerts" element={<AlertsDemo />} />
+          <Route path="/autocomplete" element={<AutocompleteDemo />} />
           <Route path="/carousel" element={<CarouselDemo />} />
           <Route path="/checkbox" element={<CheckboxDemo />} />
           <Route path="/chips" element={<ChipsDemo />} />
+          <Route path="/circular-menu" element={<CircularMenuDemo />} />
+          <Route path="/circular-rotating-list" element={<CircularRotatingListDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
           <Route path="/form" element={<FormDemo />} />
+          <Route path="/image-hover" element={<ImageHoverDemo />} />
           <Route path="/list-hover" element={<ListHoverDemo />} />
           <Route path="/modal" element={<ModalDemo />} />
           <Route path="/multiselect-menu" element={<MultiselectMenuDemo />} />
@@ -47,12 +57,14 @@ function App() {
           <Route path="/navbar" element={<NavbarDemo />} />
           <Route path="/notification-badge" element={<NotificationBadgeDemo />} />
           <Route path="/popover" element={<PopoverDemo />} />
+          <Route path="/progress" element={<ProgressDemo />} />
           <Route path="/rating" element={<RatingDemo />} />
           <Route path="/scrollspy" element={<ScrollspyDemo />} />
           <Route path="/scroll-back-to-top-btn" element={<ScrollToTopDemo />} />
           <Route path="/select-menu" element={<SelectMenuDemo />} />
           <Route path="/sidebar" element={<SidebarDemo />} />
           <Route path="/sidebar-with-submenu" element={<SidebarWithSubmenuDemo />} />
+          <Route path="/speed-dial" element={<SpeedDialDemo />} />
           <Route path="/table" element={<TableDemo />} />
           <Route path="/tabs" element={<TabsDemo />} />
           <Route path="/timeline" element={<TimelineDemo />} />

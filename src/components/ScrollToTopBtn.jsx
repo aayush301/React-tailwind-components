@@ -19,7 +19,7 @@ const ScrollToTopBtn = () => {
 
   return (
     <>
-      <button onClick={scrolltoTop} class={`${!visible && "hidden"} w-10 h-10 fixed bottom-5 right-5 inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out`} >
+      <button onClick={scrolltoTop} className={`${!visible && "hidden"} w-10 h-10 fixed bottom-5 right-5 inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out`} >
         <span><i className="fa-solid fa-arrow-up fa-lg"></i></span>
       </button>
     </>

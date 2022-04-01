@@ -1,40 +1,114 @@
 import React, { useEffect, useRef, useState } from 'react'
+import ReactDom from 'react-dom';
 
-const Dropdown = ({ mainText, children, isDismissible = true }) => {
+const classNames = (...arr) => {
+  return arr.join(" ");
+}
 
-  const [open, setOpen] = useState(false);
-  const toggleDropdownMenu = () => {
-    setOpen(open => !open);
-  }
+const Portal = ({ children }) => {
+  return ReactDom.createPortal(children, document.body);
+}
+
+const Dropdown = ({ children, menu, placement = "bottom-left", space = 5, isDismissible = true, trigger = ["click"] }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef();
+  const elementRef = useRef();
 
-  const dropdownButtonClasses = "flex items-center px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg active:text-white transition duration-150 ease-in-out whitespace-nowrap";
-  const dropdownArrowClasses = `ml-2 transition ${open ? "-rotate-180" : ""} `;
-  const dropdownMenuClasses = `${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none -translate-y-2"}
-    min-w-full absolute bg-white text-base z-50 py-2 text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding  border-[1px] border-gray-100 transition-all duration-300`;
-
-  const checkAndHideDropdown = e => {
-    if (dropdownRef.current.contains(e.target)) return;
-    setOpen(false);
-  }
   useEffect(() => {
-    if (!isDismissible) return;
+    if (!isDismissible || !isOpen) return;
     document.addEventListener("click", checkAndHideDropdown);
     return () => document.removeEventListener("click", checkAndHideDropdown);
-  }, [open]);
+  }, [isOpen]);
+
+  const checkAndHideDropdown = e => {
+    if (dropdownRef.current.contains(e.target) || elementRef.current.contains(e.target)) return;
+    setIsOpen(false);
+  }
+
+  const handleMouseEnter = () => {
+    if (!trigger.includes("hover")) return;
+    setIsOpen(true);
+    const { x, y } = getPoint(elementRef.current, dropdownRef.current, placement, space);
+    dropdownRef.current.style.left = `${x}px`;
+    dropdownRef.current.style.top = `${y}px`;
+  }
+
+  const handleMouseLeave = () => {
+    if (!trigger.includes("hover")) return;
+    setIsOpen(false);
+    const { x, y } = getPoint(elementRef.current, dropdownRef.current, placement, space);
+    dropdownRef.current.style.left = `${x}px`;
+    dropdownRef.current.style.top = `${y}px`;
+  }
+
+  const handleClick = () => {
+    if (!trigger.includes("click")) return;
+    setIsOpen(isOpen => !isOpen);
+    const { x, y } = getPoint(elementRef.current, dropdownRef.current, placement, space);
+    dropdownRef.current.style.left = `${x}px`;
+    dropdownRef.current.style.top = `${y}px`;
+  }
+
+  const getPoint = (element, dropdown, placement, space) => {
+    const eleRect = element.getBoundingClientRect();
+    const pt = { x: 0, y: 0 };
+    switch (placement) {
+      case "bottom-left": {
+        pt.x = eleRect.left;
+        pt.y = eleRect.bottom + space;
+        break;
+      }
+      case "bottom-right": {
+        pt.x = eleRect.right - dropdown.offsetWidth;
+        pt.y = eleRect.bottom + space;
+        break;
+      }
+      case "bottom-center": {
+        pt.x = eleRect.left + (element.offsetWidth - dropdown.offsetWidth) / 2;
+        pt.y = eleRect.bottom + space;
+        break;
+      }
+      case "top-left": {
+        pt.x = eleRect.left - dropdown.offsetWidth - space;
+        pt.y = eleRect.top;
+        break;
+      }
+      case "top-right": {
+        pt.x = eleRect.right + space;
+        pt.y = eleRect.top;
+        break;
+      }
+    }
+    return pt;
+  }
+
+  const getDropdownClasses = () => {
+    return classNames(
+      "fixed z-50 border shadow-xl rounded-md transition",
+      isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
+      !isOpen && placement == "bottom-left" ? "-translate-x-2 -translate-y-2" : "",
+      !isOpen && placement == "bottom-right" ? "translate-x-2 -translate-y-2" : "",
+      !isOpen && placement == "bottom-center" ? "-translate-y-2" : "",
+      !isOpen && placement == "top-left" ? "translate-x-2" : "",
+      !isOpen && placement == "top-right" ? "-translate-x-2" : "",
+    )
+  }
 
   return (
     <>
-      <div className="relative inline-block" ref={dropdownRef}>
-        <button onClick={toggleDropdownMenu} className={dropdownButtonClasses}>
-          <span>{mainText}</span>
-          <span className={dropdownArrowClasses}><i className="fa-solid fa-angle-down"></i></span>
-        </button>
+      {React.cloneElement(children, {
+        onClick: handleClick,
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
+        ref: elementRef,
+      })}
 
-        <div className={dropdownMenuClasses} >
-          {children}
+      <Portal>
+        <div className={getDropdownClasses()} ref={dropdownRef}>
+          {menu}
         </div>
-      </div>
+      </Portal>
     </>
   )
 }
