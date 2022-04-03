@@ -1,16 +1,12 @@
 import React from 'react'
 import Table from '../components/Table'
 
-const keys = ["name", "email", "roll", "a", "b", "c"];
+const keys = ["name", "email", "roll",];
 const data = [
   {
     name: "Rahul",
     email: "rahul@gmail.com",
     roll: 10,
-    a: 10,
-    b: 20,
-    c: 20,
-    d: 20,
   },
   {
     name: "Sohan",

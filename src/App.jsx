@@ -12,6 +12,7 @@ import FormDemo from "./pages/FormDemo"
 import Home from "./pages/Home"
 import ImageHoverDemo from "./pages/ImageHoverDemo"
 import ListHoverDemo from "./pages/ListHoverDemo"
+import MasonryDemo from "./pages/MasonryDemo"
 import ModalDemo from "./pages/ModalDemo"
 import MultiselectMenuDemo from "./pages/MultiselectMenuDemo"
 import MultistepFormDemo from "./pages/MultistepFormDemo"
@@ -25,12 +26,15 @@ import ScrollToTopDemo from "./pages/ScrollToTopDemo"
 import SelectMenuDemo from "./pages/SelectMenuDemo"
 import SidebarDemo from "./pages/SidebarDemo"
 import SidebarWithSubmenuDemo from "./pages/SidebarWithSubmenuDemo"
+import SortableListDemo from "./pages/SortableListDemo"
 import SpeedDialDemo from "./pages/SpeedDialDemo"
 import TableDemo from "./pages/TableDemo"
 import TabsDemo from "./pages/TabsDemo"
 import TimelineDemo from "./pages/TimelineDemo"
 import ToastDemo from "./pages/ToastDemo"
 import TooltipDemo from "./pages/TooltipDemo"
+import TreeViewDemo from "./pages/TreeViewDemo"
+import TypewriterDemo from "./pages/TypewriterDemo"
 
 function App() {
 
@@ -51,6 +55,7 @@ function App() {
           <Route path="/form" element={<FormDemo />} />
           <Route path="/image-hover" element={<ImageHoverDemo />} />
           <Route path="/list-hover" element={<ListHoverDemo />} />
+          <Route path="/masonry" element={<MasonryDemo />} />
           <Route path="/modal" element={<ModalDemo />} />
           <Route path="/multiselect-menu" element={<MultiselectMenuDemo />} />
           <Route path="/multistepform" element={<MultistepFormDemo />} />
@@ -64,12 +69,15 @@ function App() {
           <Route path="/select-menu" element={<SelectMenuDemo />} />
           <Route path="/sidebar" element={<SidebarDemo />} />
           <Route path="/sidebar-with-submenu" element={<SidebarWithSubmenuDemo />} />
+          <Route path="/sortable-list" element={<SortableListDemo />} />
           <Route path="/speed-dial" element={<SpeedDialDemo />} />
           <Route path="/table" element={<TableDemo />} />
           <Route path="/tabs" element={<TabsDemo />} />
           <Route path="/timeline" element={<TimelineDemo />} />
           <Route path="/toast" element={<ToastDemo />} />
           <Route path="/tooltip" element={<TooltipDemo />} />
+          <Route path="/tree-view" element={<TreeViewDemo />} />
+          <Route path="/typewriter" element={<TypewriterDemo />} />
         </Routes>
       </BrowserRouter>
     </>

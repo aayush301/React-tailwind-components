@@ -25,6 +25,7 @@ Note:
 - Form
 - Image hover effects
 - List hover effects
+- Masonry
 - Modal
 - Multiselect Menu
 - Multistep Form
@@ -38,12 +39,15 @@ Note:
 - Select Menu
 - Sidebar
 - Sidebar with Submenus
+- Sortable List
 - Speed Dial
 - Table
 - Tabs
 - Timeline
 - Toast
 - Tooltip
+- Tree View
+- Typewriter
 
 ## Tools and Technologies
 - HTML
