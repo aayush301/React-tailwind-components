@@ -7,6 +7,7 @@ import CheckboxDemo from "./pages/CheckboxDemo"
 import ChipsDemo from "./pages/ChipsDemo"
 import CircularMenuDemo from "./pages/CircularMenuDemo"
 import CircularRotatingListDemo from "./pages/CircularRotatingListDemo"
+import DrawerDemo from "./pages/DrawerDemo"
 import DropdownDemo from "./pages/DropdownDemo"
 import FormDemo from "./pages/FormDemo"
 import Home from "./pages/Home"
@@ -18,6 +19,7 @@ import MultiselectMenuDemo from "./pages/MultiselectMenuDemo"
 import MultistepFormDemo from "./pages/MultistepFormDemo"
 import NavbarDemo from "./pages/NavbarDemo"
 import NotificationBadgeDemo from "./pages/NotificationBadgeDemo"
+import PopconfirmDemo from "./pages/PopconfirmDemo"
 import PopoverDemo from "./pages/PopoverDemo"
 import ProgressDemo from "./pages/ProgressDemo"
 import RatingDemo from "./pages/RatingDemo"
@@ -51,6 +53,7 @@ function App() {
           <Route path="/chips" element={<ChipsDemo />} />
           <Route path="/circular-menu" element={<CircularMenuDemo />} />
           <Route path="/circular-rotating-list" element={<CircularRotatingListDemo />} />
+          <Route path="/drawer" element={<DrawerDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
           <Route path="/form" element={<FormDemo />} />
           <Route path="/image-hover" element={<ImageHoverDemo />} />
@@ -61,6 +64,7 @@ function App() {
           <Route path="/multistepform" element={<MultistepFormDemo />} />
           <Route path="/navbar" element={<NavbarDemo />} />
           <Route path="/notification-badge" element={<NotificationBadgeDemo />} />
+          <Route path="/popconfirm" element={<PopconfirmDemo />} />
           <Route path="/popover" element={<PopoverDemo />} />
           <Route path="/progress" element={<ProgressDemo />} />
           <Route path="/rating" element={<RatingDemo />} />

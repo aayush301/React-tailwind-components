@@ -21,6 +21,7 @@ Note:
 - Chips
 - Circular Menu
 - Circular Rotating List
+- Drawer
 - Dropdown
 - Form
 - Image hover effects
@@ -31,6 +32,7 @@ Note:
 - Multistep Form
 - Navbar
 - Notification Badges
+- Popconfirm
 - Popover
 - Progress
 - Rating
