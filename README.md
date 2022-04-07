@@ -36,6 +36,7 @@ Note:
 - Popover
 - Progress
 - Rating
+- Scroll Indicator
 - Scrollspy
 - Scroll back to top button
 - Select Menu
@@ -80,6 +81,8 @@ Note:
 - References
   - Tailwind Elements: https://tailwind-elements.com/
   - Tailwind Components: https://tailwindcomponents.com/
+  - Material UI: https://mui.com
+  - Ant Design: https://ant.design/components/overview/
 
 - Official Docs
   - Tailwind CSS docs: https://tailwindcss.com/

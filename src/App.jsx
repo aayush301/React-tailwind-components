@@ -23,6 +23,8 @@ import PopconfirmDemo from "./pages/PopconfirmDemo"
 import PopoverDemo from "./pages/PopoverDemo"
 import ProgressDemo from "./pages/ProgressDemo"
 import RatingDemo from "./pages/RatingDemo"
+import RippleDemo from "./pages/RippleDemo"
+import ScrollIndicatorDemo from "./pages/ScrollIndicatorDemo"
 import ScrollspyDemo from "./pages/ScrollspyDemo"
 import ScrollToTopDemo from "./pages/ScrollToTopDemo"
 import SelectMenuDemo from "./pages/SelectMenuDemo"
@@ -68,6 +70,8 @@ function App() {
           <Route path="/popover" element={<PopoverDemo />} />
           <Route path="/progress" element={<ProgressDemo />} />
           <Route path="/rating" element={<RatingDemo />} />
+          <Route path="/ripple" element={<RippleDemo />} />
+          <Route path="/scroll-indicator" element={<ScrollIndicatorDemo />} />
           <Route path="/scrollspy" element={<ScrollspyDemo />} />
           <Route path="/scroll-back-to-top-btn" element={<ScrollToTopDemo />} />
           <Route path="/select-menu" element={<SelectMenuDemo />} />
