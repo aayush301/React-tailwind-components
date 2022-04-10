@@ -1,10 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const SelectMenu = ({ title, name, onChange, list, isDismissible = true }) => {
+/**
+ * @param list: arr of objs {label, value}
+ */
+const SelectMenu = ({ title, name, id, value, list, onChange, isDismissible = true }) => {
 
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(null);
   const dropdownRef = useRef();
+
+  useEffect(() => {
+    if (value) setSelected(list.find(ob => ob.value === value));
+  }, [value]);
 
   useEffect(() => {
     if (!isDismissible) return;
@@ -24,28 +31,26 @@ const SelectMenu = ({ title, name, onChange, list, isDismissible = true }) => {
   }
 
   const checkAndHideDropdown = e => {
-    if (dropdownRef.current.contains(e.target)) return;
+    if (!dropdownRef.current || dropdownRef.current.contains(e.target)) return;
     setOpen(false);
   }
 
-  const dropdownButtonClasses = `flex items-center justify-between w-full min-w-[150px] bg-white border border-gray-300 px-3 py-2.5 text-sm rounded-md shadow-sm whitespace-nowrap hover:shadow-md focus:shadow-md focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 active:shadow-md transition duration-150 ease-in-out sm:text-base`;
-  const dropdownArrowClasses = `ml-2 transition ${open ? "-rotate-180" : ""} `;
-  const dropdownMenuClasses = `${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none -translate-y-2"}
-    m-0 mt-1 absolute min-w-full max-h-[300px] overflow-auto z-50 py-2 bg-white border-[1px] border-gray-100 transition-all duration-300 cursor-pointer rounded-lg shadow-lg`;
+  const dropdownArrowClasses = `transition ${open ? "-rotate-180" : ""}`;
+  const dropdownMenuClasses = ` ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none -translate-y-2"}`;
   const itemClasses = (option) => (
-    `${option == selected ? "text-indigo-600 font-bold" : "text-gray-400"} bg-white py-2 px-4 block w-full whitespace-nowrap hover:bg-indigo-500 hover:text-white`
+    `${selected && option.value == selected.value ? "text-sky-600" : "text-gray-600"} px-4 py-2 hover:bg-sky-50 hover:text-sky-600`
   );
 
 
   return (
     <>
-      <div className="relative inline-block text-gray-500" ref={dropdownRef}>
-        <button onClick={toggleDropdownMenu} className={dropdownButtonClasses}>
+      <div className="relative inline-block w-full" ref={dropdownRef}>
+        <button onClick={toggleDropdownMenu} id={id} className="flex justify-between w-full mt-2 px-3 py-2 text-gray-500 rounded-[4px] border-2 border-gray-100 active:border-sky-500 focus:border-sky-500 outline-none transition">
           <span>{selected ? selected.label : title}</span>
           <span className={dropdownArrowClasses}><i className="fa-solid fa-angle-down"></i></span>
         </button>
 
-        <div className={dropdownMenuClasses} >
+        <div className={"absolute z-10 min-w-full w-max max-h-[250px] overflow-auto bg-white shadow-md cursor-pointer rounded-lg py-2 transition duration-300 " + dropdownMenuClasses} >
           <ul>
             {list.map((option, i) => (
               <li key={i} className={itemClasses(option)} onClick={() => handleSelect(option)}>{option.label} </li>

@@ -11,23 +11,40 @@ const Modal = ({ children, isOpen, onClose }) => {
 
   useEffect(() => {
     if (!isOpen) return;
+    window.addEventListener("keydown", checkEscAndCloseModal);
     document.body.style.overflow = "hidden";
-    return () => document.body.style.overflow = "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", checkEscAndCloseModal);
+    }
   }, [isOpen]);
 
-  const checkAndCloseModal = e => {
+  const checkEscAndCloseModal = e => {
+    if (e.key !== "Escape") return;
+    onClose();
+  }
+
+  const checkOutsideAndCloseModal = e => {
     if (modalRef.current.contains(e.target)) return;
     onClose();
   }
 
-  if (!isOpen) return null;
+  const wrapperClasses = () => {
+    if (isOpen) return "top-0 left-0 bottom-0 right-0";
+    return "w-0 h-0";
+  }
+  const modalClasses = () => {
+    if (!isOpen) return "opacity-0 translate-y-[80px]";
+    return "opacity-1";
+  }
 
   return (
     <>
       <Portal>
-        <div className="fixed top-0 left-0 bottom-0 right-0 bg-black bg-opacity-50 z-[1000]" onClick={checkAndCloseModal}>
-          <div ref={modalRef} className='fixed top-1/2 sm:left-1/2 sm:-translate-x-1/2 -translate-y-1/2 bg-white z-[1000] rounded-sm shadow-lg sm:animate-fadeInUp'>
-            <button className='absolute top-4 right-4 hover:bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center' onClick={onClose}>
+        <div className={`fixed z-[1000] ${wrapperClasses()} overflow-hidden flex items-center justify-center bg-black bg-opacity-30`} onClick={checkOutsideAndCloseModal}>
+          <div ref={modalRef} className={`absolute max-w-[500px] max-h-[400px] overflow-auto transition duration-500 ease-out ${modalClasses()} bg-white z-[1000] rounded-sm shadow-lg`}>
+            <button className='absolute top-4 right-4 hover:bg-gray-200 w-8 h-8 flex items-center justify-center' onClick={onClose}>
               <span><i className="fa-solid fa-close"></i></span>
             </button>
             {children}
