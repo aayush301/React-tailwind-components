@@ -14,6 +14,7 @@ import Home from "./pages/Home"
 import ImageHoverDemo from "./pages/ImageHoverDemo"
 import ListHoverDemo from "./pages/ListHoverDemo"
 import MasonryDemo from "./pages/MasonryDemo"
+import MegaMenuDemo from "./pages/MegaMenuDemo"
 import ModalDemo from "./pages/ModalDemo"
 import MultiselectMenuDemo from "./pages/MultiselectMenuDemo"
 import MultistepFormDemo from "./pages/MultistepFormDemo"
@@ -61,6 +62,7 @@ function App() {
           <Route path="/image-hover" element={<ImageHoverDemo />} />
           <Route path="/list-hover" element={<ListHoverDemo />} />
           <Route path="/masonry" element={<MasonryDemo />} />
+          <Route path="/mega-menu" element={<MegaMenuDemo />} />
           <Route path="/modal" element={<ModalDemo />} />
           <Route path="/multiselect-menu" element={<MultiselectMenuDemo />} />
           <Route path="/multistepform" element={<MultistepFormDemo />} />

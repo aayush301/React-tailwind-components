@@ -27,6 +27,7 @@ Note:
 - Image hover effects
 - List hover effects
 - Masonry
+- Mega Menu
 - Modal
 - Multiselect Menu
 - Multistep Form

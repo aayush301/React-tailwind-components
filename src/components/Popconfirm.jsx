@@ -19,7 +19,7 @@ const Popconfirm = ({ children, title = "Are you sure?", okText = "Yes", cancelT
   }, [isOpen]);
 
   const checkAndHidePopconfirm = e => {
-    if (popoverRef.current.contains(e.target) || elementRef.current.contains(e.target)) return;
+    if (popoverRef.current?.contains(e.target) || elementRef.current?.contains(e.target)) return;
     setIsOpen(false);
   }
 
