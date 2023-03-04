@@ -1,48 +1,48 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import AccordionDemo from "./pages/AccordionDemo"
-import AlertsDemo from "./pages/AlertsDemo"
-import AutocompleteDemo from "./pages/AutocompleteDemo"
-import CarouselDemo from "./pages/CarouselDemo"
-import CheckboxDemo from "./pages/CheckboxDemo"
-import ChipsDemo from "./pages/ChipsDemo"
-import CircularMenuDemo from "./pages/CircularMenuDemo"
-import CircularRotatingListDemo from "./pages/CircularRotatingListDemo"
-import DrawerDemo from "./pages/DrawerDemo"
-import DropdownDemo from "./pages/DropdownDemo"
-import FormDemo from "./pages/FormDemo"
-import Home from "./pages/Home"
-import ImageHoverDemo from "./pages/ImageHoverDemo"
-import ListHoverDemo from "./pages/ListHoverDemo"
-import MasonryDemo from "./pages/MasonryDemo"
-import MegaMenuDemo from "./pages/MegaMenuDemo"
-import ModalDemo from "./pages/ModalDemo"
-import MultiselectMenuDemo from "./pages/MultiselectMenuDemo"
-import MultistepFormDemo from "./pages/MultistepFormDemo"
-import NavbarDemo from "./pages/NavbarDemo"
-import NotificationBadgeDemo from "./pages/NotificationBadgeDemo"
-import PopconfirmDemo from "./pages/PopconfirmDemo"
-import PopoverDemo from "./pages/PopoverDemo"
-import ProgressDemo from "./pages/ProgressDemo"
-import RatingDemo from "./pages/RatingDemo"
-import RippleDemo from "./pages/RippleDemo"
-import ScrollIndicatorDemo from "./pages/ScrollIndicatorDemo"
-import ScrollspyDemo from "./pages/ScrollspyDemo"
-import ScrollToTopDemo from "./pages/ScrollToTopDemo"
-import SelectMenuDemo from "./pages/SelectMenuDemo"
-import SidebarDemo from "./pages/SidebarDemo"
-import SidebarWithSubmenuDemo from "./pages/SidebarWithSubmenuDemo"
-import SortableListDemo from "./pages/SortableListDemo"
-import SpeedDialDemo from "./pages/SpeedDialDemo"
-import TableDemo from "./pages/TableDemo"
-import TabsDemo from "./pages/TabsDemo"
-import TimelineDemo from "./pages/TimelineDemo"
-import ToastDemo from "./pages/ToastDemo"
-import TooltipDemo from "./pages/TooltipDemo"
-import TreeViewDemo from "./pages/TreeViewDemo"
-import TypewriterDemo from "./pages/TypewriterDemo"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AccordionDemo from "./pages/AccordionDemo";
+import AlertsDemo from "./pages/AlertsDemo";
+import AutocompleteDemo from "./pages/AutocompleteDemo";
+import CarouselDemo from "./pages/CarouselDemo";
+import CheckboxDemo from "./pages/CheckboxDemo";
+import ChipsDemo from "./pages/ChipsDemo";
+import CircularMenuDemo from "./pages/CircularMenuDemo";
+import CircularRotatingListDemo from "./pages/CircularRotatingListDemo";
+import DatePickerDemo from "./pages/DatePickerDemo";
+import DrawerDemo from "./pages/DrawerDemo";
+import DropdownDemo from "./pages/DropdownDemo";
+import FormDemo from "./pages/FormDemo";
+import Home from "./pages/Home";
+import ImageHoverDemo from "./pages/ImageHoverDemo";
+import ListHoverDemo from "./pages/ListHoverDemo";
+import MasonryDemo from "./pages/MasonryDemo";
+import MegaMenuDemo from "./pages/MegaMenuDemo";
+import ModalDemo from "./pages/ModalDemo";
+import MultiselectMenuDemo from "./pages/MultiselectMenuDemo";
+import MultistepFormDemo from "./pages/MultistepFormDemo";
+import NavbarDemo from "./pages/NavbarDemo";
+import NotificationBadgeDemo from "./pages/NotificationBadgeDemo";
+import PopconfirmDemo from "./pages/PopconfirmDemo";
+import PopoverDemo from "./pages/PopoverDemo";
+import ProgressDemo from "./pages/ProgressDemo";
+import RatingDemo from "./pages/RatingDemo";
+import RippleDemo from "./pages/RippleDemo";
+import ScrollIndicatorDemo from "./pages/ScrollIndicatorDemo";
+import ScrollspyDemo from "./pages/ScrollspyDemo";
+import ScrollToTopDemo from "./pages/ScrollToTopDemo";
+import SelectMenuDemo from "./pages/SelectMenuDemo";
+import SidebarDemo from "./pages/SidebarDemo";
+import SidebarWithSubmenuDemo from "./pages/SidebarWithSubmenuDemo";
+import SortableListDemo from "./pages/SortableListDemo";
+import SpeedDialDemo from "./pages/SpeedDialDemo";
+import TableDemo from "./pages/TableDemo";
+import TabsDemo from "./pages/TabsDemo";
+import TimelineDemo from "./pages/TimelineDemo";
+import ToastDemo from "./pages/ToastDemo";
+import TooltipDemo from "./pages/TooltipDemo";
+import TreeViewDemo from "./pages/TreeViewDemo";
+import TypewriterDemo from "./pages/TypewriterDemo";
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -56,6 +56,7 @@ function App() {
           <Route path="/chips" element={<ChipsDemo />} />
           <Route path="/circular-menu" element={<CircularMenuDemo />} />
           <Route path="/circular-rotating-list" element={<CircularRotatingListDemo />} />
+          <Route path="/datepicker" element={<DatePickerDemo />} />
           <Route path="/drawer" element={<DrawerDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
           <Route path="/form" element={<FormDemo />} />
@@ -91,7 +92,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
