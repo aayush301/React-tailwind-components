@@ -45,7 +45,7 @@ import TypewriterDemo from "./pages/TypewriterDemo";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/React-tailwind-components">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/accordion" element={<AccordionDemo />} />
