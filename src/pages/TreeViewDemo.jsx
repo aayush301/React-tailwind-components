@@ -69,7 +69,7 @@ const TreeViewDemo = () => {
 
         Example2 (Expanded Items: 0, 10)
         <div className="w-[500px] max-h-[700px] overflow-auto">
-          <TreeView data={data} expandedKeys={["0", "1-0"]} />
+          <TreeView data={data} defaultExpandedKeys={["0", "1-0"]} />
         </div>
       </div>
     </>
