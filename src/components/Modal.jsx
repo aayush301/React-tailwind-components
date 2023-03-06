@@ -15,6 +15,7 @@ const Modal = ({
   toAnimate = true,
   animationEnter = "zoomIn",
   animationExit = "zoomOut",
+  className = "",
 }) => {
   const modalRef = useRef();
   const [mouseDownEv, setMouseDownEv] = useState(null);
@@ -82,10 +83,11 @@ const Modal = ({
         >
           <div
             ref={modalRef}
-            className={`absolute max-h-screen max-w-[100vw] overflow-auto rounded-sm bg-white shadow-lg
+            className={`absolute max-h-screen max-w-[100vw] overflow-auto
               ${toAnimate ? "transition-all duration-500 ease-out" : ""}
-              ${isOpen ? "opacity-1" : "opacity-0"} 
+              ${isOpen ? "opacity-1" : "opacity-0 pointer-events-none select-none"} 
               ${toAnimate && (isOpen ? getEnterAnimation(animationEnter) : getExitAnimation(animationExit))}
+              ${className}
               `}
           >
             {showCloseIcon && (

@@ -15,6 +15,7 @@ const Home = () => {
           { path: "/chips", label: "Chips" },
           { path: "/circular-menu", label: "Circular Menu" },
           { path: "/circular-rotating-list", label: "Circular Rotating List" },
+          { path: "/command-palette", label: "Command Palette" },
           { path: "/datepicker", label: "Date Picker" },
           { path: "/drawer", label: "Drawer" },
           { path: "/dropdown", label: "Dropdown" },

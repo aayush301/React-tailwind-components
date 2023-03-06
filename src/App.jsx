@@ -7,6 +7,7 @@ import CheckboxDemo from "./pages/CheckboxDemo";
 import ChipsDemo from "./pages/ChipsDemo";
 import CircularMenuDemo from "./pages/CircularMenuDemo";
 import CircularRotatingListDemo from "./pages/CircularRotatingListDemo";
+import CommandPaletteDemo from "./pages/CommandPaletteDemo";
 import DatePickerDemo from "./pages/DatePickerDemo";
 import DrawerDemo from "./pages/DrawerDemo";
 import DropdownDemo from "./pages/DropdownDemo";
@@ -56,6 +57,7 @@ function App() {
           <Route path="/chips" element={<ChipsDemo />} />
           <Route path="/circular-menu" element={<CircularMenuDemo />} />
           <Route path="/circular-rotating-list" element={<CircularRotatingListDemo />} />
+          <Route path="/command-palette" element={<CommandPaletteDemo />} />
           <Route path="/datepicker" element={<DatePickerDemo />} />
           <Route path="/drawer" element={<DrawerDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
