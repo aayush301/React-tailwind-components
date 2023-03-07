@@ -24,9 +24,11 @@ Note:
 - Chips
 - Circular Menu
 - Circular Rotating List
+- Command Palette
 - Datepicker
 - Drawer
 - Dropdown
+- Image Uploader
 - Form
 - Image hover effects
 - List hover effects

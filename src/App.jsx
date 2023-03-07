@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AccordionDemo from "./pages/AccordionDemo";
 import AlertsDemo from "./pages/AlertsDemo";
@@ -11,6 +12,7 @@ import CommandPaletteDemo from "./pages/CommandPaletteDemo";
 import DatePickerDemo from "./pages/DatePickerDemo";
 import DrawerDemo from "./pages/DrawerDemo";
 import DropdownDemo from "./pages/DropdownDemo";
+import ImageUploaderDemo from "./pages/ImageUploaderDemo";
 import FormDemo from "./pages/FormDemo";
 import Home from "./pages/Home";
 import ImageHoverDemo from "./pages/ImageHoverDemo";
@@ -62,6 +64,7 @@ function App() {
           <Route path="/drawer" element={<DrawerDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
           <Route path="/form" element={<FormDemo />} />
+          <Route path="/image-uploader" element={<ImageUploaderDemo />} />
           <Route path="/image-hover" element={<ImageHoverDemo />} />
           <Route path="/list-hover" element={<ListHoverDemo />} />
           <Route path="/masonry" element={<MasonryDemo />} />
