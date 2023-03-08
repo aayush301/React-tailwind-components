@@ -44,6 +44,7 @@ import ToastDemo from "./pages/ToastDemo";
 import TooltipDemo from "./pages/TooltipDemo";
 import TreeViewDemo from "./pages/TreeViewDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
+import SliderDemo from "./pages/SliderDemo";
 
 function App() {
   return (
@@ -85,6 +86,7 @@ function App() {
           <Route path="/select-menu" element={<SelectMenuDemo />} />
           <Route path="/sidebar" element={<SidebarDemo />} />
           <Route path="/sidebar-with-submenu" element={<SidebarWithSubmenuDemo />} />
+          <Route path="/slider" element={<SliderDemo />} />
           <Route path="/sortable-list" element={<SortableListDemo />} />
           <Route path="/speed-dial" element={<SpeedDialDemo />} />
           <Route path="/table" element={<TableDemo />} />

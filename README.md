@@ -49,6 +49,7 @@ Note:
 - Select Menu
 - Sidebar
 - Sidebar with Submenus
+- Slider
 - Sortable List
 - Speed Dial
 - Table
