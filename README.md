@@ -52,6 +52,7 @@ Note:
 - Slider
 - Sortable List
 - Speed Dial
+- Switch
 - Table
 - Tabs
 - Timeline

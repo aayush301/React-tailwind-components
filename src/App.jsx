@@ -35,8 +35,10 @@ import ScrollToTopDemo from "./pages/ScrollToTopDemo";
 import SelectMenuDemo from "./pages/SelectMenuDemo";
 import SidebarDemo from "./pages/SidebarDemo";
 import SidebarWithSubmenuDemo from "./pages/SidebarWithSubmenuDemo";
+import SliderDemo from "./pages/SliderDemo";
 import SortableListDemo from "./pages/SortableListDemo";
 import SpeedDialDemo from "./pages/SpeedDialDemo";
+import SwitchDemo from "./pages/SwitchDemo";
 import TableDemo from "./pages/TableDemo";
 import TabsDemo from "./pages/TabsDemo";
 import TimelineDemo from "./pages/TimelineDemo";
@@ -44,7 +46,6 @@ import ToastDemo from "./pages/ToastDemo";
 import TooltipDemo from "./pages/TooltipDemo";
 import TreeViewDemo from "./pages/TreeViewDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
-import SliderDemo from "./pages/SliderDemo";
 
 function App() {
   return (
@@ -89,6 +90,7 @@ function App() {
           <Route path="/slider" element={<SliderDemo />} />
           <Route path="/sortable-list" element={<SortableListDemo />} />
           <Route path="/speed-dial" element={<SpeedDialDemo />} />
+          <Route path="/switch" element={<SwitchDemo />} />
           <Route path="/table" element={<TableDemo />} />
           <Route path="/tabs" element={<TabsDemo />} />
           <Route path="/timeline" element={<TimelineDemo />} />
