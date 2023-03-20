@@ -21,6 +21,7 @@ const Home = () => {
           { path: "/dropdown", label: "Dropdown" },
           { path: "/image-uploader", label: "Image Uploader" },
           { path: "/form", label: "Form" },
+          { path: "/faq", label: "FAQ" },
           { path: "/image-hover", label: "Image Hover Effects" },
           { path: "/list-hover", label: "List hover Effects" },
           { path: "/masonry", label: "Masonry" },

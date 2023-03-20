@@ -13,6 +13,7 @@ import DatePickerDemo from "./pages/DatePickerDemo";
 import DrawerDemo from "./pages/DrawerDemo";
 import DropdownDemo from "./pages/DropdownDemo";
 import ImageUploaderDemo from "./pages/ImageUploaderDemo";
+import FaqDemo from "./pages/FaqDemo";
 import FormDemo from "./pages/FormDemo";
 import Home from "./pages/Home";
 import ImageHoverDemo from "./pages/ImageHoverDemo";
@@ -65,6 +66,7 @@ function App() {
           <Route path="/datepicker" element={<DatePickerDemo />} />
           <Route path="/drawer" element={<DrawerDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
+          <Route path="/faq" element={<FaqDemo />} />
           <Route path="/form" element={<FormDemo />} />
           <Route path="/image-uploader" element={<ImageUploaderDemo />} />
           <Route path="/image-hover" element={<ImageHoverDemo />} />

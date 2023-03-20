@@ -29,6 +29,7 @@ Note:
 - Drawer
 - Dropdown
 - Image Uploader
+- FAQ
 - Form
 - Image hover effects
 - List hover effects
