@@ -33,6 +33,7 @@ const Home = () => {
           { path: "/notification-badge", label: "Notification Badges" },
           { path: "/popconfirm", label: "Popconfirm" },
           { path: "/popover", label: "Popover" },
+          { path: "/pricing", label: "Pricing" },
           { path: "/progress", label: "Progress" },
           { path: "/rating", label: "Rating" },
           { path: "/ripple", label: "Ripple" },

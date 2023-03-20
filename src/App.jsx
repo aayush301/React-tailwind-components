@@ -47,6 +47,7 @@ import ToastDemo from "./pages/ToastDemo";
 import TooltipDemo from "./pages/TooltipDemo";
 import TreeViewDemo from "./pages/TreeViewDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
+import PricingDemo from "./pages/PricingDemo";
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
           <Route path="/notification-badge" element={<NotificationBadgeDemo />} />
           <Route path="/popconfirm" element={<PopconfirmDemo />} />
           <Route path="/popover" element={<PopoverDemo />} />
+          <Route path="/pricing" element={<PricingDemo />} />
           <Route path="/progress" element={<ProgressDemo />} />
           <Route path="/rating" element={<RatingDemo />} />
           <Route path="/ripple" element={<RippleDemo />} />

@@ -42,6 +42,7 @@ Note:
 - Notification Badges
 - Popconfirm
 - Popover
+- Pricing
 - Progress
 - Rating
 - Scroll Indicator
