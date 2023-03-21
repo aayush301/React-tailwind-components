@@ -30,6 +30,7 @@ Note:
 - Dropdown
 - Image Uploader
 - FAQ
+- Footer
 - Form
 - Image hover effects
 - List hover effects

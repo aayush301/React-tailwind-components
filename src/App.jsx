@@ -48,6 +48,7 @@ import TooltipDemo from "./pages/TooltipDemo";
 import TreeViewDemo from "./pages/TreeViewDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
 import PricingDemo from "./pages/PricingDemo";
+import FooterDemo from "./pages/FooterDemo";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
           <Route path="/drawer" element={<DrawerDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
           <Route path="/faq" element={<FaqDemo />} />
+          <Route path="/footer" element={<FooterDemo />} />
           <Route path="/form" element={<FormDemo />} />
           <Route path="/image-uploader" element={<ImageUploaderDemo />} />
           <Route path="/image-hover" element={<ImageHoverDemo />} />
