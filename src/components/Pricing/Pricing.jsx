@@ -1,5 +1,6 @@
 import React from "react";
 
+// UI Reference: https://tailwindui.com/components/marketing/sections/pricing
 const Pricing = () => {
   const secondaryPricingHeightPercent = 90;
   return (
