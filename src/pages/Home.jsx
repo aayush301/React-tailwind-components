@@ -52,6 +52,7 @@ const Home = () => {
           { path: "/switch", label: "Switch" },
           { path: "/table", label: "Table" },
           { path: "/tabs", label: "Tabs" },
+          { path: "/testimonials", label: "Testimonials" },
           { path: "/timeline", label: "Timeline" },
           { path: "/toast", label: "Toast" },
           { path: "/tooltip", label: "Tooltip" },
