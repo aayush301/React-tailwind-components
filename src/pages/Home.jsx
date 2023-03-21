@@ -48,6 +48,7 @@ const Home = () => {
           { path: "/slider", label: "Slider" },
           { path: "/sortable-list", label: "Sortable List" },
           { path: "/speed-dial", label: "Speed Dial" },
+          { path: "/stats-section", label: "Stats Section" },
           { path: "/switch", label: "Switch" },
           { path: "/table", label: "Table" },
           { path: "/tabs", label: "Tabs" },

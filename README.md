@@ -56,6 +56,7 @@ Note:
 - Slider
 - Sortable List
 - Speed Dial
+- Stats Section
 - Switch
 - Table
 - Tabs

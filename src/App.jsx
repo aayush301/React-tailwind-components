@@ -50,6 +50,7 @@ import TypewriterDemo from "./pages/TypewriterDemo";
 import PricingDemo from "./pages/PricingDemo";
 import FooterDemo from "./pages/FooterDemo";
 import BreadcrumbDemo from "./pages/BreadcrumbDemo";
+import StatsSectionDemo from "./pages/StatsSectionDemo";
 
 function App() {
   return (
@@ -98,6 +99,7 @@ function App() {
           <Route path="/slider" element={<SliderDemo />} />
           <Route path="/sortable-list" element={<SortableListDemo />} />
           <Route path="/speed-dial" element={<SpeedDialDemo />} />
+          <Route path="/stats-section" element={<StatsSectionDemo />} />
           <Route path="/switch" element={<SwitchDemo />} />
           <Route path="/table" element={<TableDemo />} />
           <Route path="/tabs" element={<TabsDemo />} />
