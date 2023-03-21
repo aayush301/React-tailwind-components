@@ -10,6 +10,7 @@ const Home = () => {
           { path: "/accordion", label: "Accordion" },
           { path: "/alerts", label: "Alerts" },
           { path: "/autocomplete", label: "Autocomplete" },
+          { path: "/breadcrumbs", label: "Breadcrumbs" },
           { path: "/carousel", label: "Carousel" },
           { path: "/checkbox", label: "Checkbox" },
           { path: "/chips", label: "Chips" },

@@ -19,6 +19,7 @@ Note:
 
 - Accordion
 - Alerts
+- Breadcrumbs
 - Carousel
 - Checkbox
 - Chips

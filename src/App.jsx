@@ -49,6 +49,7 @@ import TreeViewDemo from "./pages/TreeViewDemo";
 import TypewriterDemo from "./pages/TypewriterDemo";
 import PricingDemo from "./pages/PricingDemo";
 import FooterDemo from "./pages/FooterDemo";
+import BreadcrumbDemo from "./pages/BreadcrumbDemo";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
           <Route path="/accordion" element={<AccordionDemo />} />
           <Route path="/alerts" element={<AlertsDemo />} />
           <Route path="/autocomplete" element={<AutocompleteDemo />} />
+          <Route path="/breadcrumbs" element={<BreadcrumbDemo />} />
           <Route path="/carousel" element={<CarouselDemo />} />
           <Route path="/checkbox" element={<CheckboxDemo />} />
           <Route path="/chips" element={<ChipsDemo />} />
