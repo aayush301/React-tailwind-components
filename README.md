@@ -26,6 +26,7 @@ Note:
 - Circular Menu
 - Circular Rotating List
 - Command Palette
+- Content Editable
 - Datepicker
 - Drawer
 - Dropdown
@@ -60,6 +61,7 @@ Note:
 - Switch
 - Table
 - Tabs
+- Testimonials
 - Timeline
 - Toast
 - Tooltip

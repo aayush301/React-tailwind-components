@@ -52,6 +52,7 @@ import FooterDemo from "./pages/FooterDemo";
 import BreadcrumbDemo from "./pages/BreadcrumbDemo";
 import StatsSectionDemo from "./pages/StatsSectionDemo";
 import TestimonialsDemo from "./pages/TestimonialsDemo";
+import ContentEditableDemo from "./pages/ContentEditableDemo";
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path="/circular-menu" element={<CircularMenuDemo />} />
           <Route path="/circular-rotating-list" element={<CircularRotatingListDemo />} />
           <Route path="/command-palette" element={<CommandPaletteDemo />} />
+          <Route path="/content-editable" element={<ContentEditableDemo />} />
           <Route path="/datepicker" element={<DatePickerDemo />} />
           <Route path="/drawer" element={<DrawerDemo />} />
           <Route path="/dropdown" element={<DropdownDemo />} />
