@@ -39,6 +39,7 @@ const Home = () => {
           { path: "/pricing", label: "Pricing" },
           { path: "/progress", label: "Progress" },
           { path: "/rating", label: "Rating" },
+          { path: "/resizable", label: "Resizable" },
           { path: "/ripple", label: "Ripple" },
           { path: "/scroll-indicator", label: "Scroll Indicator" },
           { path: "/scrollspy", label: "Scrollspy" },

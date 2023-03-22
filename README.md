@@ -48,6 +48,7 @@ Note:
 - Pricing
 - Progress
 - Rating
+- Resizable
 - Scroll Indicator
 - Scrollspy
 - Scroll back to top button

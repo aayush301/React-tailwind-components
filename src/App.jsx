@@ -53,6 +53,7 @@ import BreadcrumbDemo from "./pages/BreadcrumbDemo";
 import StatsSectionDemo from "./pages/StatsSectionDemo";
 import TestimonialsDemo from "./pages/TestimonialsDemo";
 import ContentEditableDemo from "./pages/ContentEditableDemo";
+import ResizableDemo from "./pages/ResizableDemo";
 
 function App() {
   return (
@@ -92,6 +93,7 @@ function App() {
           <Route path="/pricing" element={<PricingDemo />} />
           <Route path="/progress" element={<ProgressDemo />} />
           <Route path="/rating" element={<RatingDemo />} />
+          <Route path="/resizable" element={<ResizableDemo />} />
           <Route path="/ripple" element={<RippleDemo />} />
           <Route path="/scroll-indicator" element={<ScrollIndicatorDemo />} />
           <Route path="/scrollspy" element={<ScrollspyDemo />} />
