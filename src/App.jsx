@@ -56,6 +56,8 @@ import ContentEditableDemo from "./pages/ContentEditableDemo";
 import ResizableDemo from "./pages/ResizableDemo";
 import AnimatedMultilevelDropdownDemo from "./pages/AnimatedMultilevelDropdownDemo";
 import AnimatedFormDemo from "./pages/AnimatedFormDemo";
+import LoaderDemo from "./pages/LoaderDemo";
+import RadioBtnDemo from "./pages/RadioBtnDemo";
 
 function App() {
   return (
@@ -85,6 +87,7 @@ function App() {
           <Route path="/image-uploader" element={<ImageUploaderDemo />} />
           <Route path="/image-hover" element={<ImageHoverDemo />} />
           <Route path="/list-hover" element={<ListHoverDemo />} />
+          <Route path="/loader" element={<LoaderDemo />} />
           <Route path="/masonry" element={<MasonryDemo />} />
           <Route path="/mega-menu" element={<MegaMenuDemo />} />
           <Route path="/modal" element={<ModalDemo />} />
@@ -96,6 +99,7 @@ function App() {
           <Route path="/popover" element={<PopoverDemo />} />
           <Route path="/pricing" element={<PricingDemo />} />
           <Route path="/progress" element={<ProgressDemo />} />
+          <Route path="/radio-btn" element={<RadioBtnDemo />} />
           <Route path="/rating" element={<RatingDemo />} />
           <Route path="/resizable" element={<ResizableDemo />} />
           <Route path="/ripple" element={<RippleDemo />} />

@@ -1,44 +1,110 @@
-import React, { useState } from 'react'
+import React, { createRef, useEffect, useState } from "react";
+import { useRef } from "react";
 
-const Tabs = () => {
-  const [openedTab, setOpenedTab] = useState(0);
+/**
+ * @param {({tabName:string, tabTitle:string})[]} tabsData - Array of tabs. tabName: unique tab name to each tab
+ */
+const TabBar = ({ tabsData, activeTabName, onTabClick }) => {
+  const tabGroupRef = useRef();
+  const sliderRef = useRef();
+  const [refs, setRefs] = useState([]);
+  const [isAtLeftEnd, setIsAtLeftEnd] = useState(true);
+  const [isAtRightEnd, setIsAtRightEnd] = useState(true);
 
-  const tabClasses = (tabNo) => (
-    `nav-link block font-medium text-xs leading-tight cursor-pointer uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 py-3 mt-2 hover:bg-gray-100 focus:border-transparent transition
-     ${openedTab === tabNo && "text-blue-500 border-blue-500"} `
-  );
+  // Create ref for each tab
+  useEffect(() => {
+    const refs = tabsData.map(() => createRef());
+    setRefs(refs);
+  }, [tabsData]);
+
+  // Slide the slider when active tab changes
+  useEffect(() => {
+    const i = tabsData.findIndex(tab => tab.tabName === activeTabName);
+    if (!sliderRef.current || !refs[i]?.current) return;
+    const w = refs[i].current.offsetWidth;
+    const left = refs[i].current.offsetLeft;
+    sliderRef.current.style.left = `${left}px`;
+    sliderRef.current.style.width = `${w}px`;
+  }, [activeTabName, refs, tabsData]);
+
+  // Scroll into view of active tab when active tab changes
+  useEffect(() => {
+    const i = tabsData.findIndex(tab => tab.tabName === activeTabName);
+    if (!refs[i]?.current) return;
+    refs[i]?.current.scrollIntoView({ block: "nearest", inline: "center" });
+    setIsAtLeftEnd(tabGroupRef.current?.scrollLeft === 0);
+    setIsAtRightEnd(
+      tabGroupRef.current?.scrollLeft + tabGroupRef.current?.clientWidth === tabGroupRef.current?.scrollWidth
+    );
+  }, [refs, tabsData, activeTabName]);
+
+  // Keep an eye on horizontal scrolling to detect whether we are at left end, at right end, or in between.
+  const handleScroll = () => {
+    setIsAtLeftEnd(tabGroupRef.current?.scrollLeft === 0);
+    setIsAtRightEnd(
+      tabGroupRef.current?.scrollLeft + tabGroupRef.current?.clientWidth === tabGroupRef.current?.scrollWidth
+    );
+  };
 
   return (
-    <>
-      <div className='border-2 border-slate-200 m-4'>
-        <ul className="flex flex-row flex-wrap list-none border-b-2 border-slate-200 p-0 mb-4">
-          <li> <a className={tabClasses(0)} onClick={() => setOpenedTab(0)}>Home</a> </li>
-          <li> <a className={tabClasses(1)} onClick={() => setOpenedTab(1)}>Profile</a> </li>
-          <li> <a className={tabClasses(2)} onClick={() => setOpenedTab(2)}>Messages</a> </li>
-          <li> <a className={tabClasses(3)} onClick={() => setOpenedTab(3)}>Contact</a> </li>
-        </ul>
-
-        <div className="">
-          <div className={openedTab != 0 ? "hidden" : ""}>
-            Tab 1 content
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore temporibus minima eveniet, ipsum ad repellat eos delectus velit quasi facilis nesciunt nihil quam architecto mollitia molestias explicabo quia dolor atque esse expedita culpa. Velit sed assumenda molestiae, nulla fugit officia neque optio delectus aspernatur, architecto, rem repudiandae odio! Neque, nemo!
-          </div>
-          <div className={openedTab != 1 ? "hidden" : ""}>
-            Tab 2 content
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorem?
-          </div>
-          <div className={openedTab != 2 ? "hidden" : ""}>
-            Tab 3 content
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos delectus voluptas ducimus labore sint ipsa quasi esse incidunt quisquam quaerat accusantium aperiam possimus eveniet reprehenderit, veritatis commodi blanditiis laudantium voluptate iste! Sapiente illo reprehenderit animi enim eum officiis nihil quis molestiae minima nemo accusantium error suscipit aperiam, aut odit nam deleniti eveniet inventore temporibus expedita. Dolorem, ex saepe? Iusto adipisci earum inventore repellat repudiandae tempora maxime dolorum aperiam at officiis, consequuntur praesentium similique, ex sequi, minus error quaerat excepturi doloribus temporibus? Quis nisi asperiores odit in corporis natus, ab mollitia cumque quasi qui expedita, enim eligendi debitis laborum cupiditate?
-          </div>
-          <div className={openedTab != 3 ? "hidden" : ""}>
-            Tab 4 content
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nisi.
-          </div>
-        </div>
+    <div className="relative w-full overflow-hidden">
+      <div
+        ref={tabGroupRef}
+        onScroll={handleScroll}
+        className="relative flex w-full overflow-auto scroll-smooth rounded-sm font-medium text-gray-800 [&::-webkit-scrollbar]:hidden"
+      >
+        {tabsData.map((tab, i) => (
+          <button
+            ref={refs[i]}
+            key={i}
+            onClick={() => onTabClick(tab.tabName)}
+            className={`shrink-0 cursor-pointer border-x border-x-gray-200 px-3 py-2 transition-all hover:bg-gray-200
+              ${activeTabName === tab.tabName && "text-rose-600"}
+            `}
+          >
+            {tab.tabTitle}
+          </button>
+        ))}
+        <div ref={sliderRef} className="absolute bottom-0 h-[2px] bg-rose-500 transition-[left,width]"></div>
       </div>
-    </>
-  )
-}
 
-export default Tabs
+      {/* Show left blurred to indicate that we are not at extreme left, if so is the case */}
+      {!isAtLeftEnd && (
+        <span
+          className="absolute left-0 top-0 bottom-0 flex w-16 items-center pl-[1px]"
+          style={{
+            background:
+              "linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(245, 243, 240) 40%, rgb(245, 243, 240) 100%)",
+          }}
+        >
+          <button
+            className="flex h-8 w-8 items-center justify-center rounded-full transition hover:bg-gray-200"
+            onClick={() => (tabGroupRef.current.scrollLeft -= 100)}
+          >
+            <i className="fa-solid fa-angle-left"></i>
+          </button>
+        </span>
+      )}
+
+      {/* Show right blurred to indicate that we are not at extreme right, if so is the case */}
+      {!isAtRightEnd && (
+        <span
+          className="absolute right-0 top-0 bottom-0 flex w-16 items-center justify-end pr-[1px]"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(245, 243, 240) 40%, rgb(245, 243, 240) 100%)",
+          }}
+        >
+          <button
+            className="flex h-8 w-8 items-center justify-center rounded-full transition hover:bg-gray-200"
+            onClick={() => (tabGroupRef.current.scrollLeft += 100)}
+          >
+            <i className="fa-solid fa-angle-right"></i>
+          </button>
+        </span>
+      )}
+    </div>
+  );
+};
+
+export default TabBar;

@@ -39,6 +39,7 @@ Note:
 - Image Hover effects
 - Image Uploader
 - List hover effects
+- Loader
 - Masonry
 - Mega Menu
 - Modal
@@ -50,6 +51,7 @@ Note:
 - Popover
 - Pricing
 - Progress
+- Radio button
 - Rating
 - Resizable
 - Ripple
