@@ -19,6 +19,9 @@ Note:
 
 - Accordion
 - Alerts
+- Animated Form
+- Animated Multilevel Dropdown
+- Autocomplete
 - Breadcrumbs
 - Carousel
 - Checkbox
@@ -30,11 +33,11 @@ Note:
 - Datepicker
 - Drawer
 - Dropdown
-- Image Uploader
 - FAQ
 - Footer
 - Form
-- Image hover effects
+- Image Hover effects
+- Image Uploader
 - List hover effects
 - Masonry
 - Mega Menu
@@ -49,6 +52,7 @@ Note:
 - Progress
 - Rating
 - Resizable
+- Ripple
 - Scroll Indicator
 - Scrollspy
 - Scroll back to top button

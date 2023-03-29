@@ -54,6 +54,8 @@ import StatsSectionDemo from "./pages/StatsSectionDemo";
 import TestimonialsDemo from "./pages/TestimonialsDemo";
 import ContentEditableDemo from "./pages/ContentEditableDemo";
 import ResizableDemo from "./pages/ResizableDemo";
+import AnimatedMultilevelDropdownDemo from "./pages/AnimatedMultilevelDropdownDemo";
+import AnimatedFormDemo from "./pages/AnimatedFormDemo";
 
 function App() {
   return (
@@ -63,6 +65,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/accordion" element={<AccordionDemo />} />
           <Route path="/alerts" element={<AlertsDemo />} />
+          <Route path="/animated-form" element={<AnimatedFormDemo />} />
+          <Route path="/animated-multilevel-dropdown" element={<AnimatedMultilevelDropdownDemo />} />
           <Route path="/autocomplete" element={<AutocompleteDemo />} />
           <Route path="/breadcrumbs" element={<BreadcrumbDemo />} />
           <Route path="/carousel" element={<CarouselDemo />} />
