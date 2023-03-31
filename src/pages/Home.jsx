@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <h1 className="text-center text-xl shadow-sm p-4">React Tailwind Components</h1>
-      <ul className="mt-2 flex flex-col w-screen gap-1 content-evenly sm:flex-wrap bg-gray-100 px-16 sm:px-0 py-8 h-[480px] overflow-auto text-gray-600">
+      <ul className="mt-2 flex flex-col w-screen gap-1 content-evenly sm:flex-wrap bg-gray-100 px-16 sm:px-0 pt-4 pb-2 h-[480px] overflow-auto text-gray-600">
         {[
           { path: "/accordion", label: "Accordion" },
           { path: "/alerts", label: "Alerts" },
@@ -44,7 +44,9 @@ const Home = () => {
           { path: "/radio-btn", label: "Radio button" },
           { path: "/rating", label: "Rating" },
           { path: "/resizable", label: "Resizable" },
+          { path: "/ribbon", label: "Ribbon" },
           { path: "/ripple", label: "Ripple" },
+          { path: "/scroll-animations", label: "Scroll Animations" },
           { path: "/scroll-indicator", label: "Scroll Indicator" },
           { path: "/scrollspy", label: "Scrollspy" },
           { path: "/scroll-back-to-top-btn", label: "Scroll Back To Top Button" },

@@ -54,6 +54,7 @@ Note:
 - Radio button
 - Rating
 - Resizable
+- Ribbon
 - Ripple
 - Scroll Indicator
 - Scrollspy

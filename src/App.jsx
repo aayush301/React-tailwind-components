@@ -58,6 +58,8 @@ import AnimatedMultilevelDropdownDemo from "./pages/AnimatedMultilevelDropdownDe
 import AnimatedFormDemo from "./pages/AnimatedFormDemo";
 import LoaderDemo from "./pages/LoaderDemo";
 import RadioBtnDemo from "./pages/RadioBtnDemo";
+import RibbonDemo from "./pages/RibbonDemo";
+import ScrollAnimationsDemo from "./pages/ScrollAnimationsDemo";
 
 function App() {
   return (
@@ -102,7 +104,9 @@ function App() {
           <Route path="/radio-btn" element={<RadioBtnDemo />} />
           <Route path="/rating" element={<RatingDemo />} />
           <Route path="/resizable" element={<ResizableDemo />} />
+          <Route path="/ribbon" element={<RibbonDemo />} />
           <Route path="/ripple" element={<RippleDemo />} />
+          <Route path="/scroll-animations" element={<ScrollAnimationsDemo />} />
           <Route path="/scroll-indicator" element={<ScrollIndicatorDemo />} />
           <Route path="/scrollspy" element={<ScrollspyDemo />} />
           <Route path="/scroll-back-to-top-btn" element={<ScrollToTopDemo />} />
